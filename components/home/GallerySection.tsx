@@ -1,13 +1,6 @@
 import Image from "next/image";
 import PlaceholderMedia from "@/components/PlaceholderMedia";
-
-const realPhotos = [
-  { src: "/gallery/fachada.jpg", alt: "Fachada e placa da Clínica Samya Francis" },
-  { src: "/gallery/sala-atendimento.jpg", alt: "Sala de atendimento pediátrico da Clínica Samya Francis" },
-  { src: "/gallery/pilates-estudio.jpg", alt: "Estúdio de Pilates clínico da Clínica Samya Francis" },
-];
-
-const pendingItems = ["Recepção", "Equipamentos", "Equipe"];
+import { realPhotos, pendingGalleryItems } from "@/lib/gallery";
 
 export default function GallerySection() {
   return (
@@ -37,7 +30,7 @@ export default function GallerySection() {
               />
             </div>
           ))}
-          {pendingItems.map((item) => (
+          {pendingGalleryItems.map((item) => (
             <PlaceholderMedia key={item} label={`foto real — ${item}`} />
           ))}
         </div>

@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import PlaceholderMedia from "@/components/PlaceholderMedia";
 import { clinic } from "@/lib/clinic-data";
 import { doctorCrefito, doctorEducation, doctorExperience } from "@/lib/doctor";
+import { realPhotos, pendingGalleryItems } from "@/lib/gallery";
 
 export const metadata: Metadata = {
   title: "A Clínica",
@@ -118,14 +119,7 @@ export default function ClinicaPage() {
             Nosso espaço
           </h2>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { src: "/gallery/fachada.jpg", alt: "Fachada e placa da Clínica Samya Francis" },
-              {
-                src: "/gallery/sala-atendimento.jpg",
-                alt: "Sala de atendimento pediátrico da Clínica Samya Francis",
-              },
-              { src: "/gallery/pilates-estudio.jpg", alt: "Estúdio de Pilates clínico da Clínica Samya Francis" },
-            ].map((photo) => (
+            {realPhotos.map((photo) => (
               <div
                 key={photo.src}
                 className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-md shadow-brand-900/10"
@@ -133,7 +127,7 @@ export default function ClinicaPage() {
                 <Image src={photo.src} alt={photo.alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
               </div>
             ))}
-            {["Recepção", "Equipamentos", "Equipe"].map((item) => (
+            {pendingGalleryItems.map((item) => (
               <PlaceholderMedia key={item} label={`foto real — ${item}`} />
             ))}
           </div>
