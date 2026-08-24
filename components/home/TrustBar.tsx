@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { clinic } from "@/lib/clinic-data";
+import { googleRating, googleReviewCount } from "@/lib/reviews";
 
 const STARS = "★★★★★";
 
 const stats = [
-  { value: "[PENDENTE]", label: "no Google" },
-  { value: "[PENDENTE]", label: "avaliações no Google" },
+  { value: googleRating, label: "no Google" },
+  { value: `${googleReviewCount}`, label: "avaliações no Google" },
   { value: "20+", label: "especialidades e tratamentos" },
   { value: "100%", label: "atendimento individualizado" },
 ];
@@ -26,10 +27,6 @@ export default function TrustBar() {
           <span className="text-lg tracking-wide text-amber-500" aria-hidden="true">
             {STARS}
           </span>
-          <p className="text-xs text-ink-600">
-            Nota e número de avaliações do Google serão exibidos aqui assim que confirmados /
-            integrados ao Google Business Profile.
-          </p>
           <Link
             href={clinic.mapsUrl}
             target="_blank"

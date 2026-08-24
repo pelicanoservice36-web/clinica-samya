@@ -1,0 +1,40 @@
+{
+  "scrapedAt": "2026-08-24T17:52:00.000Z",
+  "source": "https://www.google.com/maps/place/Cl%C3%ADnica+Samya+Francis/@-23.6410854,-46.5267012,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce42a0b6c79b2f:0x1417b1aef2cf3786!8m2!3d-23.6410854!4d-46.5267012!16s%2Fg%2F11bttp8y0s?entry=ttu",
+  "rating": "5,0",
+  "reviewCount": 482,
+  "reviews": [
+    {
+      "name": "lidiane Ferreira",
+      "reviewerMeta": "2 avaliações",
+      "relativeTime": "2 semanas atrás",
+      "isNew": true,
+      "text": "Experiência maravilhosa a clínica é um lugar acolhedor, limpo muito organizado. A atenção de todos os funcionários é sensacional eles realmente amam o que fazem. Se você busca um atendimento de excelência esse é o lugar. A Dra Samya é muito …",
+      "ownerReply": null
+    },
+    {
+      "name": "Márcia Lupia",
+      "reviewerMeta": "5 avaliações",
+      "relativeTime": "3 meses atrás",
+      "isNew": false,
+      "text": "Recomendo a Clínica Samya Francis sem hesitar. Cheguei com um quadro sério de costocondrite e, após tentar diversas abordagens sem sucesso por muito tempo (osteopatia, natação e medicamentos), fui orientada a buscar o RPG. Foi onde minha …",
+      "ownerReply": "Márcia Lúpia, muito obrigada por dedicar um pouco do seu tempo para compartilhar sua experiência conosco. …"
+    },
+    {
+      "name": "Yumi Waki Kato",
+      "reviewerMeta": "8 avaliações · 2 fotos",
+      "relativeTime": "3 meses atrás",
+      "isNew": false,
+      "text": "Conheci a clínica através de pesquisa do Google e me surpreendi. Não tinha conhecimento algum e vim tratar uma dor recorrente há mais de 2 …",
+      "ownerReply": "Yumi Kato, muito obrigada pelo seu feedback ele é muito importante para nós. Ficamos felizes em ler seu relato e saber que melhorou suas queixas e hoje …"
+    }
+  ],
+  "topTags": [
+    { "tag": "recepção", "count": 63 },
+    { "tag": "quiropraxia", "count": 47 },
+    { "tag": "liberação miofascial", "count": 35 },
+    { "tag": "clinica", "count": 31 }
+  ],
+  "coverPhotoLocalPath": "public/gallery/fachada.jpg",
+  "note": "Extraído da visualização não autenticada do Google Maps (sem login). O texto das avaliações aparece truncado com '…' — é exatamente como o Google exibe para qualquer visitante sem login, não foi editado. Mais avaliações e fotos exigem login no Google e não foram coletadas."
+}

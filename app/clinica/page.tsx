@@ -83,11 +83,27 @@ export default function ClinicaPage() {
             Nosso espaço
           </h2>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {["Recepção", "Salas de atendimento", "Equipamentos", "Estúdio de Pilates", "Equipe", "Ambiente"].map(
-              (item) => (
-                <PlaceholderMedia key={item} label={`foto real — ${item}`} />
-              ),
-            )}
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-md shadow-brand-900/10">
+              <Image
+                src="/gallery/fachada.jpg"
+                alt="Fachada e placa da Clínica Samya Francis"
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-md shadow-brand-900/10">
+              <Image
+                src="/gallery/pilates-estudio.jpg"
+                alt="Estúdio de Pilates clínico da Clínica Samya Francis"
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            {["Recepção", "Salas de atendimento", "Equipamentos", "Equipe"].map((item) => (
+              <PlaceholderMedia key={item} label={`foto real — ${item}`} />
+            ))}
           </div>
         </div>
       </section>
