@@ -7,6 +7,7 @@ export const realPhotos: GalleryPhoto[] = [
   { src: "/gallery/fachada.jpg", alt: "Fachada e placa da Clínica Samya Francis" },
   { src: "/gallery/sala-atendimento.jpg", alt: "Sala de atendimento pediátrico da Clínica Samya Francis" },
   { src: "/gallery/equipamentos.jpg", alt: "Sala de equipamentos da Clínica Samya Francis" },
+  { src: "/gallery/sala-reabilitacao.jpg", alt: "Sala de reabilitação da Clínica Samya Francis" },
   { src: "/gallery/pilates-estudio.jpg", alt: "Estúdio de Pilates clínico da Clínica Samya Francis" },
 ];
 
