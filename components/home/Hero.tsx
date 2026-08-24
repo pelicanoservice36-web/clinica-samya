@@ -46,7 +46,7 @@ export default function Hero() {
             loop
             playsInline
             aria-hidden="true"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover object-[62%_50%]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-900/35 via-brand-900/0 to-transparent" />
           <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
