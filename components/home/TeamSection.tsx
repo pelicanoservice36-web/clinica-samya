@@ -1,11 +1,21 @@
+import Image from "next/image";
 import Link from "next/link";
-import PlaceholderMedia from "@/components/PlaceholderMedia";
 
 export default function TeamSection() {
   return (
     <section className="bg-sand-50 py-20 sm:py-24" id="quem-somos">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 md:grid-cols-2 md:items-center lg:px-8">
-        <PlaceholderMedia label="foto real da Dra. Samya Francis" className="order-last md:order-first" />
+        <div className="order-last flex items-center justify-center rounded-2xl bg-brand-50 p-10 md:order-first">
+          <div className="relative h-56 w-56 overflow-hidden rounded-full shadow-xl shadow-brand-900/15 ring-4 ring-white sm:h-64 sm:w-64">
+            <Image
+              src="/team/samya-francis.jpg"
+              alt="Dra. Samya Francis"
+              fill
+              sizes="256px"
+              className="object-cover"
+            />
+          </div>
+        </div>
 
         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">

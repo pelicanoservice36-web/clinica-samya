@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import PlaceholderMedia from "@/components/PlaceholderMedia";
 import { clinic } from "@/lib/clinic-data";
@@ -31,7 +32,17 @@ export default function ClinicaPage() {
 
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 md:grid-cols-2 md:items-center lg:px-8">
-          <PlaceholderMedia label="foto real da Dra. Samya Francis" className="order-last md:order-first" />
+          <div className="order-last flex items-center justify-center rounded-2xl bg-brand-50 p-10 md:order-first">
+            <div className="relative h-56 w-56 overflow-hidden rounded-full shadow-xl shadow-brand-900/15 ring-4 ring-white sm:h-64 sm:w-64">
+              <Image
+                src="/team/samya-francis.jpg"
+                alt="Dra. Samya Francis"
+                fill
+                sizes="256px"
+                className="object-cover"
+              />
+            </div>
+          </div>
 
           <div>
             <h2 className="font-heading text-2xl font-semibold text-ink-900">
