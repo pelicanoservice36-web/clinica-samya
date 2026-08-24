@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { clinic } from "@/lib/clinic-data";
 
@@ -39,13 +38,15 @@ export default function Hero() {
         </div>
 
         <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-2xl shadow-brand-900/20 md:aspect-square">
-          <Image
-            src="/gallery/pilates-estudio.jpg"
-            alt="Estúdio de Pilates clínico da Clínica Samya Francis"
-            fill
-            priority
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover"
+          <video
+            src="/gallery/clinica-samya.mp4"
+            poster="/gallery/pilates-estudio.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-900/35 via-brand-900/0 to-transparent" />
           <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
