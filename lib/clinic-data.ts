@@ -26,7 +26,8 @@ export const clinic = {
     return `${this.address.street}, ${this.address.neighborhood}, ${this.address.city} - ${this.address.state}`;
   },
   hours: "Segunda a sexta, 8h às 20h",
-  mapsUrl: "https://www.google.com/maps/place/Cl%C3%ADnica+Samya+Francis/",
+  mapsUrl:
+    "https://www.google.com/maps/place/Cl%C3%ADnica+Samya+Francis/@-23.6410805,-46.5292761,17z/data=!4m8!3m7!1s0x94ce42a0b6c79b2f:0x1417b1aef2cf3786!8m2!3d-23.6410854!4d-46.5267012!9m1!1b1!16s%2Fg%2F11bttp8y0s?entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D",
   instagramUrl: "https://www.instagram.com/clinicasamyafrancis/",
   instagramHandle: "@clinicasamyafrancis",
 } as const;
