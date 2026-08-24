@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import PlaceholderMedia from "@/components/PlaceholderMedia";
 import { clinic } from "@/lib/clinic-data";
 
 export default function Hero() {
@@ -38,11 +38,18 @@ export default function Hero() {
           </p>
         </div>
 
-        <PlaceholderMedia
-          label="foto real da clínica, equipe ou paciente em atendimento (Instagram/site oficial)"
-          aspect="aspect-[4/3]"
-          className="md:aspect-square"
-        />
+        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-2xl shadow-brand-900/20 md:aspect-square">
+          <Image
+            src="/gallery/pilates-estudio.jpg"
+            alt="Estúdio de Pilates clínico da Clínica Samya Francis"
+            fill
+            priority
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-900/35 via-brand-900/0 to-transparent" />
+          <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
+        </div>
       </div>
     </section>
   );
