@@ -24,6 +24,10 @@ export default function LocationSection() {
               {clinic.address.city} - {clinic.address.state}, CEP {clinic.address.postalCode}
             </p>
             <p className="mt-4 text-sm text-ink-600">{clinic.hours}</p>
+            <p className="mt-4 text-sm text-ink-600">
+              Local de fácil acesso, próximo à UFABC e à UPA Bangú, com estacionamento no local,
+              Wi-Fi e sistema de segurança 24 horas por câmeras e alarmes.
+            </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <Link
                 href={clinic.mapsUrl}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import PlaceholderMedia from "@/components/PlaceholderMedia";
 import { clinic } from "@/lib/clinic-data";
+import { doctorCrefito, doctorEducation, doctorExperience } from "@/lib/doctor";
 
 export const metadata: Metadata = {
   title: "A Clínica",
@@ -53,12 +54,46 @@ export default function ClinicaPage() {
               bem-estar, guiada pela Dra. Samya Francis, reunindo mais de 20 especialidades em um
               único local para cuidar de você em todas as fases da vida.
             </p>
-            <p className="mt-4 rounded-xl border border-dashed border-brand-300 bg-brand-50 p-4 text-sm text-brand-700">
-              [PENDENTE: incluir formação acadêmica e especializações da Dra. Samya Francis
-              (graduação, cursos de acupuntura, quiropraxia, RPG, reabilitação vestibular,
-              dry needling, bandagem funcional, terapia manual etc.), confirmadas diretamente com a
-              clínica — não localizadas publicamente no site oficial durante esta pesquisa.]
+            <p className="mt-4 inline-block rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-sm font-medium text-brand-800">
+              {doctorCrefito}
             </p>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center font-heading text-2xl font-semibold text-ink-900">
+            Formação e experiência da Dra. Samya Francis
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-ink-600">
+            Mais de 17 anos dedicados à fisioterapia, reabilitação e terapias complementares.
+          </p>
+
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            <div className="rounded-2xl border border-brand-100 bg-sand-50 p-6 sm:p-8">
+              <h3 className="font-heading text-lg font-semibold text-ink-900">
+                Formação e especializações
+              </h3>
+              <ul className="mt-4 grid gap-x-6 gap-y-2.5 sm:grid-cols-2">
+                {doctorEducation.map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-ink-700">
+                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-2xl border border-brand-100 bg-sand-50 p-6 sm:p-8">
+              <h3 className="font-heading text-lg font-semibold text-ink-900">Experiência clínica</h3>
+              <ul className="mt-4 space-y-2.5">
+                {doctorExperience.map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-ink-700">
+                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 

@@ -1,5 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { doctorCrefito } from "@/lib/doctor";
+
+const highlights = [
+  "Fisioterapia — UNI SANT'ANNA",
+  "Especialista em Acupuntura",
+  "Especialista em Quiropraxia",
+  "Reabilitação Vestibular e Neurológica",
+];
 
 export default function TeamSection() {
   return (
@@ -26,20 +34,24 @@ export default function TeamSection() {
           </h2>
           <p className="mt-4 text-ink-700">
             Uma clínica multidisciplinar de saúde, reabilitação e bem-estar, guiada pela Dra. Samya
-            Francis. Experiência clínica, conhecimento técnico e cuidado humano em cada
-            atendimento.
+            Francis ({doctorCrefito}), com mais de 17 anos de atendimento em fisioterapia,
+            reabilitação e terapias complementares.
           </p>
-          <p className="mt-4 rounded-xl border border-dashed border-brand-300 bg-brand-50 p-4 text-sm text-brand-700">
-            [PENDENTE: incluir aqui formação acadêmica e especializações da Dra. Samya Francis
-            (graduação, cursos de acupuntura, quiropraxia, RPG, reabilitação vestibular etc.),
-            confirmadas diretamente com a clínica — não localizadas publicamente no site oficial
-            durante esta pesquisa.]
-          </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {highlights.map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-brand-200 bg-white px-3 py-1.5 text-xs font-medium text-brand-800"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
           <Link
             href="/clinica"
             className="mt-6 inline-block text-sm font-semibold text-brand-700 underline-offset-4 hover:underline"
           >
-            Conhecer a equipe →
+            Ver formação completa →
           </Link>
         </div>
       </div>
