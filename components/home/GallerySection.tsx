@@ -1,7 +1,13 @@
 import Image from "next/image";
 import PlaceholderMedia from "@/components/PlaceholderMedia";
 
-const pendingItems = ["Recepção", "Salas de atendimento", "Equipamentos", "Equipe"];
+const realPhotos = [
+  { src: "/gallery/fachada.jpg", alt: "Fachada e placa da Clínica Samya Francis" },
+  { src: "/gallery/sala-atendimento.jpg", alt: "Sala de atendimento pediátrico da Clínica Samya Francis" },
+  { src: "/gallery/pilates-estudio.jpg", alt: "Estúdio de Pilates clínico da Clínica Samya Francis" },
+];
+
+const pendingItems = ["Recepção", "Equipamentos", "Equipe"];
 
 export default function GallerySection() {
   return (
@@ -17,24 +23,20 @@ export default function GallerySection() {
         </div>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-md shadow-brand-900/10">
-            <Image
-              src="/gallery/fachada.jpg"
-              alt="Fachada e placa da Clínica Samya Francis"
-              fill
-              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-md shadow-brand-900/10">
-            <Image
-              src="/gallery/pilates-estudio.jpg"
-              alt="Estúdio de Pilates clínico da Clínica Samya Francis"
-              fill
-              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
+          {realPhotos.map((photo) => (
+            <div
+              key={photo.src}
+              className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-md shadow-brand-900/10"
+            >
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          ))}
           {pendingItems.map((item) => (
             <PlaceholderMedia key={item} label={`foto real — ${item}`} />
           ))}
