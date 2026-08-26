@@ -1,6 +1,5 @@
 import Image from "next/image";
-import PlaceholderMedia from "@/components/PlaceholderMedia";
-import { realPhotos, pendingGalleryItems } from "@/lib/gallery";
+import { realPhotos } from "@/lib/gallery";
 
 export default function GallerySection() {
   return (
@@ -29,9 +28,6 @@ export default function GallerySection() {
                 className="object-cover"
               />
             </div>
-          ))}
-          {pendingGalleryItems.map((item) => (
-            <PlaceholderMedia key={item} label={`foto real — ${item}`} />
           ))}
         </div>
       </div>

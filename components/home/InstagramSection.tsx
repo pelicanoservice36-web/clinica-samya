@@ -1,15 +1,5 @@
 import Link from "next/link";
-import PlaceholderMedia from "@/components/PlaceholderMedia";
 import { clinic } from "@/lib/clinic-data";
-
-const topics = [
-  "Fisioterapia",
-  "Exercícios",
-  "Reabilitação vestibular",
-  "Pilates",
-  "Saúde e postura",
-  "Atendimento domiciliar",
-];
 
 export default function InstagramSection() {
   return (
@@ -33,16 +23,6 @@ export default function InstagramSection() {
             Ver nosso Instagram →
           </Link>
         </div>
-
-        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          {topics.map((topic) => (
-            <PlaceholderMedia key={topic} label={topic} aspect="aspect-square" />
-          ))}
-        </div>
-        <p className="mt-4 text-xs text-ink-600">
-          Feed ilustrativo por tema — substituir por embed real do {clinic.instagramHandle} quando
-          disponível.
-        </p>
       </div>
     </section>
   );

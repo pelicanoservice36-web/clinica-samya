@@ -1,5 +1,4 @@
 import Link from "next/link";
-import PlaceholderMedia from "@/components/PlaceholderMedia";
 import { clinic } from "@/lib/clinic-data";
 
 const steps = [
@@ -12,7 +11,7 @@ const steps = [
 export default function HomeCareSection() {
   return (
     <section className="bg-white py-20 sm:py-24" id="atendimento-domiciliar">
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 md:grid-cols-2 md:items-center lg:px-8">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
             Atendimento Domiciliar
@@ -49,8 +48,6 @@ export default function HomeCareSection() {
             Solicitar atendimento domiciliar
           </Link>
         </div>
-
-        <PlaceholderMedia label="foto real de atendimento domiciliar" />
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
-import PlaceholderMedia from "@/components/PlaceholderMedia";
 import { clinic } from "@/lib/clinic-data";
 
 export const metadata: Metadata = {
@@ -31,7 +30,7 @@ export default function PilatesPage() {
       />
 
       <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 md:grid-cols-2 md:items-start lg:px-8">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div>
             <h2 className="font-heading text-2xl font-semibold text-ink-900">Como funciona</h2>
             <p className="mt-4 text-ink-700">
@@ -75,11 +74,6 @@ export default function PilatesPage() {
             >
               Agendar Pilates
             </a>
-          </div>
-
-          <div className="grid gap-5">
-            <PlaceholderMedia label="foto real do estúdio de Pilates" />
-            <PlaceholderMedia label="foto real de aula de Pilates em andamento" />
           </div>
         </div>
       </section>

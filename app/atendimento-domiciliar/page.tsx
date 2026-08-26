@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
-import PlaceholderMedia from "@/components/PlaceholderMedia";
 import { clinic } from "@/lib/clinic-data";
 
 export const metadata: Metadata = {
@@ -45,25 +44,21 @@ export default function AtendimentoDomiciliarPage() {
 
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 md:grid-cols-2">
-            <div>
-              <h2 className="font-heading text-2xl font-semibold text-ink-900">Como funciona</h2>
-              <ol className="mt-6 space-y-6">
-                {steps.map((step, index) => (
-                  <li key={step.title} className="flex gap-4">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-600 text-sm font-semibold text-white">
-                      {index + 1}
-                    </span>
-                    <div>
-                      <p className="font-semibold text-ink-900">{step.title}</p>
-                      <p className="text-sm text-ink-600">{step.description}</p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </div>
-
-            <PlaceholderMedia label="foto real de atendimento domiciliar" aspect="aspect-square" />
+          <div className="max-w-2xl">
+            <h2 className="font-heading text-2xl font-semibold text-ink-900">Como funciona</h2>
+            <ol className="mt-6 space-y-6">
+              {steps.map((step, index) => (
+                <li key={step.title} className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-600 text-sm font-semibold text-white">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <p className="font-semibold text-ink-900">{step.title}</p>
+                    <p className="text-sm text-ink-600">{step.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
           </div>
 
           <div className="mt-16">

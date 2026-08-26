@@ -1,5 +1,4 @@
 import Link from "next/link";
-import PlaceholderMedia from "@/components/PlaceholderMedia";
 
 const highlights = [
   "Equipamentos Cadillac, Reformer, Ladder Barrel e Chair",
@@ -13,9 +12,7 @@ const highlights = [
 export default function PilatesSection() {
   return (
     <section className="bg-brand-50 py-20 sm:py-24" id="pilates">
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 md:grid-cols-2 md:items-center lg:px-8">
-        <PlaceholderMedia label="foto real do estúdio de Pilates da clínica" className="order-last md:order-first" />
-
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
             Pilates Clínico

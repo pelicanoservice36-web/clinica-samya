@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
-import PlaceholderMedia from "@/components/PlaceholderMedia";
 import { clinic } from "@/lib/clinic-data";
 import { doctorCrefito, doctorEducation, doctorExperience } from "@/lib/doctor";
-import { realPhotos, pendingGalleryItems } from "@/lib/gallery";
+import { realPhotos } from "@/lib/gallery";
 
 export const metadata: Metadata = {
   title: "A Clínica",
@@ -126,9 +125,6 @@ export default function ClinicaPage() {
               >
                 <Image src={photo.src} alt={photo.alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
               </div>
-            ))}
-            {pendingGalleryItems.map((item) => (
-              <PlaceholderMedia key={item} label={`foto real — ${item}`} />
             ))}
           </div>
         </div>
