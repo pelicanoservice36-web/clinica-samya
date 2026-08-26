@@ -14,7 +14,7 @@ export default function GallerySection() {
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-4xl gap-5 sm:grid-cols-2">
           {realPhotos.map((photo) => (
             <div
               key={photo.src}
@@ -24,7 +24,7 @@ export default function GallerySection() {
                 src={photo.src}
                 alt={photo.alt}
                 fill
-                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                sizes="(min-width: 640px) 50vw, 100vw"
                 className="object-cover"
               />
             </div>

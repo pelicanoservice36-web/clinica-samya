@@ -117,13 +117,13 @@ export default function ClinicaPage() {
           <h2 className="text-center font-heading text-2xl font-semibold text-ink-900">
             Nosso espaço
           </h2>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-8 grid max-w-4xl gap-5 sm:grid-cols-2">
             {realPhotos.map((photo) => (
               <div
                 key={photo.src}
                 className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-md shadow-brand-900/10"
               >
-                <Image src={photo.src} alt={photo.alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
+                <Image src={photo.src} alt={photo.alt} fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover" />
               </div>
             ))}
           </div>
