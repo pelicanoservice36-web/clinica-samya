@@ -17,19 +17,19 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-brand-900/90 via-brand-900/65 to-brand-900/25" />
       <div className="absolute inset-0 bg-gradient-to-t from-brand-900/75 via-transparent to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 md:py-32 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 md:py-14 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-sand-200">
             Clínica multidisciplinar de saúde em Santo André
           </p>
-          <h1 className="mt-4 font-heading text-4xl font-semibold leading-tight text-white sm:text-5xl">
+          <h1 className="mt-3 font-heading text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-5xl">
             Cuide da sua saúde com quem entende de movimento, dor e reabilitação.
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-sand-100">
+          <p className="mt-3 max-w-xl text-base text-sand-100 sm:text-lg">
             Tratamentos personalizados em fisioterapia, Pilates clínico, acupuntura e diversas
             especialidades para você recuperar sua mobilidade, reduzir dores e viver melhor.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-5 flex flex-wrap gap-4">
             <Link
               href={clinic.whatsappHrefWithMessage("Olá! Gostaria de agendar uma avaliação.")}
               target="_blank"
