@@ -212,6 +212,13 @@ export const needCategories: NeedCategory[] = [
   },
 ];
 
+// Duas perguntas foram removidas daqui (não só ocultadas na UI) porque o FaqAccordion
+// e o FAQPage schema (lib/schema.ts) consomem faqItems diretamente — deixar a resposta
+// como "[PENDENTE: ...]" published significa que uma IA (Google AI Overview, ChatGPT,
+// Perplexity) pode citar esse texto de placeholder como se fosse a resposta oficial da
+// clínica. Readicionar com a resposta real assim que a clínica confirmar:
+// - "A avaliação é cobrada?" (política de cobrança da avaliação inicial)
+// - "Quais formas de pagamento são aceitas?" (cartão, PIX, parcelamento)
 export const faqItems = [
   {
     question: "A clínica atende convênios?",
@@ -222,11 +229,6 @@ export const faqItems = [
     question: "Como funciona o reembolso?",
     answer:
       "Após o atendimento particular, fornecemos os documentos necessários (recibo e relatório, quando aplicável) para que você solicite o reembolso diretamente ao seu convênio.",
-  },
-  {
-    question: "A avaliação é cobrada?",
-    answer:
-      "[PENDENTE: confirmar política de cobrança da avaliação inicial com a clínica antes de publicar.]",
   },
   {
     question: "Quanto dura uma sessão?",
@@ -254,10 +256,6 @@ export const faqItems = [
   {
     question: "Quantas pessoas participam das aulas de Pilates?",
     answer: "As turmas são reduzidas, com no máximo 3 alunos por horário, garantindo atenção individualizada.",
-  },
-  {
-    question: "Quais formas de pagamento são aceitas?",
-    answer: "[PENDENTE: confirmar formas de pagamento aceitas (cartão, PIX, parcelamento) com a clínica.]",
   },
   {
     question: "A clínica atende aos sábados?",
