@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { clinic, treatments } from "@/lib/clinic-data";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Tratamentos",
@@ -12,6 +13,17 @@ export const metadata: Metadata = {
 export default function TratamentosPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Início", path: "/" },
+              { name: "Tratamentos", path: "/tratamentos" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="Tratamentos"
         title="Tratamentos para cuidar de você por completo"

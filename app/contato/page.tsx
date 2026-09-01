@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import LocationSection from "@/components/home/LocationSection";
 import { clinic } from "@/lib/clinic-data";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Contato",
@@ -12,6 +13,17 @@ export const metadata: Metadata = {
 export default function ContatoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Início", path: "/" },
+              { name: "Contato", path: "/contato" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="Contato"
         title="Pronto para cuidar melhor da sua saúde?"

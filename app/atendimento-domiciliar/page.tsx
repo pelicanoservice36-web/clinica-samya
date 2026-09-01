@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import { clinic } from "@/lib/clinic-data";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Atendimento Domiciliar",
@@ -36,6 +37,17 @@ const resources = [
 export default function AtendimentoDomiciliarPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Início", path: "/" },
+              { name: "Atendimento Domiciliar", path: "/atendimento-domiciliar" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="Atendimento Domiciliar"
         title="Tratamento profissional no conforto da sua casa"

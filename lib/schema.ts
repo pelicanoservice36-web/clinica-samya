@@ -1,4 +1,5 @@
 import { clinic } from "./clinic-data";
+import { googleRating, googleReviewCount } from "./reviews";
 
 const SITE_URL = "https://www.clinicasamya.com.br";
 
@@ -31,6 +32,12 @@ export function localBusinessSchema() {
       closes: "20:00",
     },
     sameAs: [clinic.instagramUrl, clinic.mapsUrl],
+    // schema.org expects a decimal point, not the PT-BR comma stored in googleRating ("5,0")
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: Number(googleRating.replace(",", ".")),
+      reviewCount: googleReviewCount,
+    },
   };
 }
 

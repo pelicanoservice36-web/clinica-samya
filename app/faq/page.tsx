@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import FaqAccordion from "@/components/FaqAccordion";
 import { faqItems } from "@/lib/clinic-data";
-import { faqSchema } from "@/lib/schema";
+import { faqSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Perguntas Frequentes",
@@ -16,6 +16,17 @@ export default function FaqPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqItems)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Início", path: "/" },
+              { name: "Perguntas Frequentes", path: "/faq" },
+            ])
+          ),
+        }}
       />
       <PageHero eyebrow="FAQ" title="Perguntas frequentes" />
 

@@ -1,9 +1,12 @@
+import { doctorCrefito } from "@/lib/doctor";
+import { googleRating, googleReviewCount } from "@/lib/reviews";
+
 const differentiators = [
   "Atendimento individualizado",
   "Equipe multidisciplinar",
-  "Profissionais especializados",
+  `Mais de 17 anos de experiência (${doctorCrefito})`,
   "Ambiente acolhedor",
-  "Estrutura moderna",
+  `${googleRating}★ com ${googleReviewCount} avaliações no Google`,
   "Tratamentos personalizados",
   "Atendimento domiciliar",
   "Localização de fácil acesso",

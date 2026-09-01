@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import { clinic } from "@/lib/clinic-data";
 import { doctorCrefito, doctorEducation, doctorExperience } from "@/lib/doctor";
 import { realPhotos } from "@/lib/gallery";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "A Clínica",
@@ -25,6 +26,17 @@ const differentiators = [
 export default function ClinicaPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Início", path: "/" },
+              { name: "A Clínica", path: "/clinica" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="A Clínica"
         title="Conheça a Clínica Samya Francis"

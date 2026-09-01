@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import { clinic } from "@/lib/clinic-data";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Pilates Clínico",
@@ -23,6 +24,17 @@ const benefits = [
 export default function PilatesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Início", path: "/" },
+              { name: "Pilates Clínico", path: "/pilates" },
+            ])
+          ),
+        }}
+      />
       <PageHero
         eyebrow="Pilates Clínico"
         title="Pilates clínico com acompanhamento individualizado"
